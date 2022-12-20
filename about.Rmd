@@ -1,5 +1,18 @@
 ---
 title: "About This Website"
+output:
+  html_document:
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: no
 ---
 
 More about this website.
+
+# Header 1 {.tabset}
+
+## Header 2
+
+## Header 3
+

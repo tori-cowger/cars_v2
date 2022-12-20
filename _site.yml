@@ -1,9 +1,11 @@
-name: "my-website"
+name: "Boston WW"
 output_dir: docs
 navbar:
-  title: "My Website"
+  title: "Boston WW"
   left:
-    - text: "Home"
+    - text: "Overview"
       href: index.html
-    - text: "About"
+    - text: "Neighborhoods"
       href: about.html
+    - text: "Variants"
+      href: new_cars.html
