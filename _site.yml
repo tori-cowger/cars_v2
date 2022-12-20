@@ -9,3 +9,7 @@ navbar:
       href: about.html
     - text: "Variants"
       href: new_cars.html
+    - text: "Dash"
+      href: flexdash.html
+    - text: "Dash2"
+      href: flexdash.html
