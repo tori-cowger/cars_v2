@@ -4,7 +4,7 @@ runtime: shiny
 output: 
   html_document:
     code_folding: show
-    theme:
+    theme: 
       color-contrast-warnings: false
       bg: "#202123"
       fg: "#B8BCC2"

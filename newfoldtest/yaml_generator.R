@@ -14,7 +14,8 @@ yml_empty() %>%
       navbar_page(navbar_separator(), href = "about.html")
     )
   ) %>%
-  yml_output(html_document(toc = TRUE, highlight = "textmate"))
+  yml_output(html_document(toc = TRUE, highlight = "textmate", 
+                           theme="flatly"))
 
 
 navbar_separator()
