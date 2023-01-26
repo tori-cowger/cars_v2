@@ -1,0 +1,18 @@
+#name: "Boston WW"
+output_dir: docs
+exclude: ["theming.Rmd", "Untitled.Rmd"]
+include: "_navbar.html"
+navbar:
+  title: "Boston WW"
+  type: inverse
+  left:
+    - icon: "fa-home"
+      href: index.html
+    - text: "Neighborhoods"
+      href: about.html
+    - text: "Variants"
+      href: new_cars.html
+    - text: "Dash"
+      href: flexdash.html
+    - text: "Dash2"
+      href: flexdash.html

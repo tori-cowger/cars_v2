@@ -1,0 +1,55 @@
+---
+title: "Summary"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(crosstalk)
+library(leaflet)
+library(DT)
+```
+
+
+# Example 1
+```{r}
+library("plotly")
+# Wrap data frame in SharedData
+sd <- SharedData$new(quakes[sample(nrow(quakes), 100),])
+
+# Create a filter input
+filter_slider("mag", "Magnitude", sd, column=~mag, step=0.1, width=250)
+
+# Use SharedData like a dataframe with Crosstalk-enabled widgets
+bscols(
+  leaflet(sd) %>% addTiles() %>% addMarkers(),
+  datatable(sd, extensions="Scroller", style="bootstrap", class="compact", width="100%",
+    options=list(deferRender=TRUE, scrollY=300, scroller=TRUE))
+)
+
+```
+
+# Example 2
+```{r}
+library("ggplot2")
+# Wrap data frame in SharedData
+#mt <- SharedData$new(mtcars)
+mt <- highlight_key(mtcars)
+
+# Create a filter input
+
+g2 <- ggplot(mt, aes(x=wt, y=drat, color = cyl, group = cyl)) +
+  geom_point() + theme_classic() + labs(title = "Cross Plot")
+
+g3 <- ggplot(mt, aes(x=mpg, y=disp, color = cyl, group = cyl)) +
+  geom_point() + theme_classic() + labs(title = "Cross Plot")
+
+# Use SharedData like a dataframe with Crosstalk-enabled widgets
+bscols(
+  widths= c(12,6,6),
+  filter_select("cyl", "Cylinders", mt, group = ~cyl),
+  ggplotly(g2) %>% highlight("plotly_selected", off = "plotly_deselect"), 
+  ggplotly(g3)%>% highlight(on = "plotly_selected", off = "plotly_deselect")
+)
+```
+
+
