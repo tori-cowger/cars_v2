@@ -13,4 +13,3 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
-WebsitePath: /Users/vic404/Documents/repos/cars_v2/docs
