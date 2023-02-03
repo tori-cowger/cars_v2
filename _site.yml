@@ -1,7 +1,7 @@
 #name: "Boston WW"
 output_dir: docs
 exclude: ["theming.Rmd", "Untitled.Rmd", "newfoldtest"]
-#include: "_navbar.html"
+#include: "newfoldtest/navbar.html"
 navbar:
   title: "Boston WW"
   left:
@@ -18,12 +18,6 @@ navbar:
 output: 
   html_document:
     theme:
-      bootswatch: flatly
-#      bg: "#202123"
-#      fg: "#B8BCC2"
-#      primary: "#EA80FC"
-#      secondary: "#00DAC6"
-      base_font:
-        google: Prompt
-      heading_font:
-        google: Proza Libre
+      primary: "#072671"
+      bootswatch: "united"
+      

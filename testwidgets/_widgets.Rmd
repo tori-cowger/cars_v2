@@ -1,0 +1,32 @@
+---
+title: "widgets"
+output: html_document
+date: "2023-02-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+
+```
+
+
+```{r}
+library(ggplot2)
+library(plotly)
+library(here)
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+p_widget <- ggplotly(p)
+
+p_widget
+
+saveWidget(
+  p_widget,
+  here("test_widgets", "pw.html"),
+  selfcontained = TRUE,
+)
+```

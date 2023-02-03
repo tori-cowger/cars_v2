@@ -156,7 +156,7 @@
 }
 
 .irs {
-  font-family: Prompt;
+  font-family: var(--bs-font-sans-serif);
 }
 
 .irs--shiny {
@@ -179,9 +179,9 @@
 .irs--shiny .irs-bar {
   top: 25px;
   height: 8px;
-  border-top: 1px solid #2c3e50;
-  border-bottom: 1px solid #2c3e50;
-  background: #2c3e50;
+  border-top: 1px solid #072671;
+  border-bottom: 1px solid #072671;
+  background: #072671;
 }
 
 .irs--shiny .irs-bar--single {
@@ -235,7 +235,7 @@
   color: #fff;
   text-shadow: none;
   padding: 1px 3px;
-  background-color: #2c3e50;
+  background-color: #072671;
   border-radius: 3px;
   font-size: 11px;
   line-height: 1.333;

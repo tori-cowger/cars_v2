@@ -1,4 +1,5 @@
 library("ymlthis")
+library(tidyverse)
 
 yml_empty() %>%
   yml_site_opts(
@@ -19,3 +20,14 @@ yml_empty() %>%
 
 
 navbar_separator()
+
+
+output: 
+  html_document:
+  theme:
+  navbar-bg: "#195784"
+  #      primary: "#EA80FC"
+#      secondary: "#00DAC6"
+base_font:
+  google: Titillium Web
+#heading_font: Montserrat-Bold
