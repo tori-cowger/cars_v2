@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 library(ggplot2)
 library(plotly)
 library(here)
+library(htmlwidgets)
 p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
             geom_bar(position = "dodge")
 p_widget <- ggplotly(p)
@@ -26,7 +27,7 @@ p_widget
 
 saveWidget(
   p_widget,
-  here("test_widgets", "pw.html"),
+  here("testwidgets", "pw.html"),
   selfcontained = TRUE,
 )
 ```
