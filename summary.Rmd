@@ -3,7 +3,11 @@ title: "Summary"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
 library(crosstalk)
 library(leaflet)
 library(DT)
